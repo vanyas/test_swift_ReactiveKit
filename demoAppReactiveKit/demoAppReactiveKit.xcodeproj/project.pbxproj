@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7684EC8E1D9887DA0096E1FF /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8C1D9887DA0096E1FF /* Bond.framework */; };
+		7684EC8F1D9887DA0096E1FF /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */; };
+		7684EC901D9888730096E1FF /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8C1D9887DA0096E1FF /* Bond.framework */; };
+		7684EC911D9888730096E1FF /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */; };
 		76E1A6BC1D98774F00B72CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */; };
 		76E1A6BE1D98774F00B72CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A6BD1D98774F00B72CAE /* ViewController.swift */; };
 		76E1A6C11D98774F00B72CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A6BF1D98774F00B72CAE /* Main.storyboard */; };
@@ -26,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7684EC8C1D9887DA0096E1FF /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 		76E1A6B81D98774F00B72CAE /* demoAppReactiveKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoAppReactiveKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E1A6BD1D98774F00B72CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7684EC8E1D9887DA0096E1FF /* Bond.framework in Frameworks */,
+				7684EC8F1D9887DA0096E1FF /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,15 +58,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7684EC901D9888730096E1FF /* Bond.framework in Frameworks */,
+				7684EC911D9888730096E1FF /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7684EC891D9883FF0096E1FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7684EC8C1D9887DA0096E1FF /* Bond.framework */,
+				7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76E1A6AF1D98774F00B72CAE = {
 			isa = PBXGroup;
 			children = (
+				7684EC891D9883FF0096E1FF /* Frameworks */,
 				76E1A6BA1D98774F00B72CAE /* demoAppReactiveKit */,
 				76E1A6CF1D98774F00B72CAE /* demoAppReactiveKitTests */,
 				76E1A6B91D98774F00B72CAE /* Products */,
@@ -106,6 +126,7 @@
 				76E1A6B41D98774F00B72CAE /* Sources */,
 				76E1A6B51D98774F00B72CAE /* Frameworks */,
 				76E1A6B61D98774F00B72CAE /* Resources */,
+				7684EC811D9882F10096E1FF /* Carthage Copy Frameworks Script */,
 			);
 			buildRules = (
 			);
@@ -195,6 +216,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7684EC811D9882F10096E1FF /* Carthage Copy Frameworks Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
+			);
+			name = "Carthage Copy Frameworks Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $(SRCROOT)\n\n/usr/local/bin/carthage copy-frameworks\n\necho 'Copy Carthage!'";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		76E1A6B41D98774F00B72CAE /* Sources */ = {
@@ -342,6 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VKCR9K5Q4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = demoAppReactiveKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vangeliOntiveros.demoAppReactiveKit;
@@ -355,6 +399,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VKCR9K5Q4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = demoAppReactiveKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vangeliOntiveros.demoAppReactiveKit;
@@ -369,6 +417,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = VKCR9K5Q4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = demoAppReactiveKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vangeliOntiveros.demoAppReactiveKitTests;
@@ -384,6 +436,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = VKCR9K5Q4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = demoAppReactiveKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vangeliOntiveros.demoAppReactiveKitTests;
