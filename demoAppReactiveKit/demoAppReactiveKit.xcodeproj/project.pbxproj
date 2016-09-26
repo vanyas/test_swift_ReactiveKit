@@ -11,8 +11,9 @@
 		7684EC8F1D9887DA0096E1FF /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */; };
 		7684EC901D9888730096E1FF /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8C1D9887DA0096E1FF /* Bond.framework */; };
 		7684EC911D9888730096E1FF /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */; };
+		7684EC981D98902F0096E1FF /* CheckInOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7684EC971D98902F0096E1FF /* CheckInOptionsViewController.swift */; };
+		7684EC9A1D9897C70096E1FF /* CheckInOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7684EC991D9897C70096E1FF /* CheckInOptionsViewModel.swift */; };
 		76E1A6BC1D98774F00B72CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */; };
-		76E1A6BE1D98774F00B72CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A6BD1D98774F00B72CAE /* ViewController.swift */; };
 		76E1A6C11D98774F00B72CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A6BF1D98774F00B72CAE /* Main.storyboard */; };
 		76E1A6C31D98774F00B72CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A6C21D98774F00B72CAE /* Assets.xcassets */; };
 		76E1A6C61D98774F00B72CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A6C41D98774F00B72CAE /* LaunchScreen.storyboard */; };
@@ -32,9 +33,10 @@
 /* Begin PBXFileReference section */
 		7684EC8C1D9887DA0096E1FF /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
 		7684EC8D1D9887DA0096E1FF /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
+		7684EC971D98902F0096E1FF /* CheckInOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInOptionsViewController.swift; sourceTree = "<group>"; };
+		7684EC991D9897C70096E1FF /* CheckInOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInOptionsViewModel.swift; sourceTree = "<group>"; };
 		76E1A6B81D98774F00B72CAE /* demoAppReactiveKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoAppReactiveKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76E1A6BD1D98774F00B72CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		76E1A6C01D98774F00B72CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76E1A6C21D98774F00B72CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E1A6C51D98774F00B72CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7684EC921D988FE50096E1FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7684EC931D988FE50096E1FF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7684EC971D98902F0096E1FF /* CheckInOptionsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7684EC941D988FE50096E1FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7684EC991D9897C70096E1FF /* CheckInOptionsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7684EC951D988FF00096E1FF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7684EC961D9890050096E1FF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		76E1A6AF1D98774F00B72CAE = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +137,14 @@
 		76E1A6BA1D98774F00B72CAE /* demoAppReactiveKit */ = {
 			isa = PBXGroup;
 			children = (
-				76E1A6BB1D98774F00B72CAE /* AppDelegate.swift */,
-				76E1A6BD1D98774F00B72CAE /* ViewController.swift */,
+				7684EC961D9890050096E1FF /* AppDelegate */,
+				7684EC921D988FE50096E1FF /* Models */,
+				7684EC941D988FE50096E1FF /* ViewModels */,
+				7684EC931D988FE50096E1FF /* ViewControllers */,
+				7684EC951D988FF00096E1FF /* Storyboards */,
 				76E1A6BF1D98774F00B72CAE /* Main.storyboard */,
-				76E1A6C21D98774F00B72CAE /* Assets.xcassets */,
 				76E1A6C41D98774F00B72CAE /* LaunchScreen.storyboard */,
+				76E1A6C21D98774F00B72CAE /* Assets.xcassets */,
 				76E1A6C71D98774F00B72CAE /* Info.plist */,
 			);
 			path = demoAppReactiveKit;
@@ -241,8 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E1A6BE1D98774F00B72CAE /* ViewController.swift in Sources */,
 				76E1A6BC1D98774F00B72CAE /* AppDelegate.swift in Sources */,
+				7684EC981D98902F0096E1FF /* CheckInOptionsViewController.swift in Sources */,
+				7684EC9A1D9897C70096E1FF /* CheckInOptionsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
